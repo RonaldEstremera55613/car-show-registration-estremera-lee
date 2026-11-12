@@ -1,5 +1,7 @@
+using Api.Features.Registrations;
 using Application.Abstractions.Data;
 using Application.Abstractions.Messaging;
+using Application.Features.Registrations.CreateRegistration;
 using Domain.Common;
 using FluentValidation;
 using Infrastructure.Persistence;
@@ -18,6 +20,13 @@ builder.Services.AddValidatorsFromAssembly(typeof(IAppDbContext).Assembly);
 // Handlers
 // builder.Services.AddScoped<ICommandHandler<TCommand, Result<TResponse>>, TCommandHandler>();
 // builder.Services.AddScoped<IQueryHandler<TQuery, Result<TResponse>>, TQueryHandler>();
+// Allow Enums to be passed as strings in JSON
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+});
+
+builder.Services.AddScoped<ICommandHandler<CreateRegistrationCommand, Result<CreateRegistrationResponse>>, CreateRegistrationCommandHandler>();
 
 // API
 builder.Services.AddEndpointsApiExplorer();
@@ -55,5 +64,6 @@ app.MapGet("/", () => "Welcome to the Vertical Slice API! Go to /scalar/v1 for A
 
 // Map endpoints
 // app.Map{FeatureGroup}Endpoints();
+app.MapRegistrationEndpoints();
 
 app.Run();

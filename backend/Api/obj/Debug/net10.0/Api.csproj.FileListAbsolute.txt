@@ -268,3 +268,4 @@ C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-regis
 C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Api\obj\Debug\net10.0\Api.csproj.Up2Date
 C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Api\obj\Debug\net10.0\Api.genruntimeconfig.cache
 C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Api\obj\Debug\net10.0\ref\Api.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
