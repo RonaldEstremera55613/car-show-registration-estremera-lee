@@ -35,6 +35,7 @@ public sealed class GetRegistrationsQueryHandler(IAppDbContext dbContext)
 
         var items = await dbQuery
             .OrderByDescending(r => r.RegistrationDate)
+            .ThenByDescending(r => r.RegistrationNumber)
             .Skip((query.Page - 1) * query.PageSize)
             .Take(query.PageSize)
             .Select(r => new RegistrationDto(

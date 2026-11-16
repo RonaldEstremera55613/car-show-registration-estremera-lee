@@ -21,7 +21,7 @@ public sealed class CreateRegistrationCommandHandler(IAppDbContext dbContext)
         if (plateExists)
         {
             return Result<CreateRegistrationResponse>.Failure(
-                Error.Validation("Registration.Conflict", $"A registration with plate number '{command.PlateNumber}' already exists."));
+                Error.Conflict("Registration.Conflict", $"A registration with plate number '{command.PlateNumber}' already exists."));
         }
 
         // 2. Calculate Fee based on Type

@@ -43,10 +43,17 @@ public static class RegistrationEndpoints
     }
 
     private static async Task<IResult> Create(
-        CreateRegistrationCommand command,
-        ICommandHandler<CreateRegistrationCommand, Result<CreateRegistrationResponse>> handler,
-        CancellationToken cancellationToken)
+    CreateRegistrationCommand command,
+    ICommandHandler<CreateRegistrationCommand, Result<CreateRegistrationResponse>> handler,
+    IValidator<CreateRegistrationCommand> validator, // <-- Added the validator here
+    CancellationToken cancellationToken)
     {
+        var validationResult = await validator.ValidateAsync(command, cancellationToken);
+        if (!validationResult.IsValid)
+        {
+            return Results.ValidationProblem(validationResult.ToDictionary());
+        }
+
         var result = await handler.HandleAsync(command, cancellationToken);
 
         return result.IsSuccess
