@@ -3,6 +3,7 @@
 using Api.Common.Extensions;
 using Application.Abstractions.Messaging;
 using Application.Features.Registrations.CreateRegistration;
+using Application.Features.Registrations.GetRegistrationById;
 using Application.Features.Registrations.GetRegistrations;
 using Application.Features.Registrations.GetRegistrationSummary;
 using Domain.Common;
@@ -17,7 +18,7 @@ public static class RegistrationEndpoints
 
         group.MapPost("/", Create)
             .WithName("CreateRegistration")
-            .WithSummary("Create Registration")
+            .WithSummary("Create New Registration")
             .Produces<CreateRegistrationResponse>(StatusCodes.Status201Created)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .ProducesProblem(StatusCodes.Status409Conflict);
@@ -29,8 +30,15 @@ public static class RegistrationEndpoints
             .ProducesProblem(StatusCodes.Status400BadRequest);
         group.MapGet("/summary", GetSummary)
             .WithName("GetRegistrationSummary")
-            .WithSummary("Get Summary Registration")
+            .WithSummary("Get Registration Summary")
             .Produces<GetRegistrationSummaryResponse>(StatusCodes.Status200OK);
+
+        group.MapGet("/{id:guid}", GetById)
+            .WithName("GetRegistrationById")
+            .WithSummary("Get Registration Using Id")
+            .Produces<GetRegistrationByIdResponse>(StatusCodes.Status200OK)
+            .ProducesProblem(StatusCodes.Status404NotFound);
+
     }
 
     private static async Task<IResult> Create(
@@ -60,6 +68,15 @@ public static class RegistrationEndpoints
         CancellationToken cancellationToken)
     {
         var result = await handler.HandleAsync(new GetRegistrationSummaryQuery(), cancellationToken);
+        return result.IsSuccess
+            ? TypedResults.Ok(result.Value)
+            : result.ToProblemDetails();
+    }
+    private static async Task<IResult> GetById(Guid id,
+        IQueryHandler<GetRegistrationByIdQuery, Result<GetRegistrationByIdResponse>> handler,
+        CancellationToken cancellationToken)
+    {
+        var result = await handler.HandleAsync(new GetRegistrationByIdQuery(id), cancellationToken);
         return result.IsSuccess
             ? TypedResults.Ok(result.Value)
             : result.ToProblemDetails();
