@@ -7,6 +7,7 @@ using Application.Features.Registrations.GetRegistrationById;
 using Application.Features.Registrations.GetRegistrations;
 using Application.Features.Registrations.GetRegistrationSummary;
 using Domain.Common;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
 public static class RegistrationEndpoints
@@ -55,8 +56,16 @@ public static class RegistrationEndpoints
     private static async Task<IResult> GetAll(
         [AsParameters] GetRegistrationsQuery query,
         IQueryHandler<GetRegistrationsQuery, Result<GetRegistrationsResponse>> handler,
-        CancellationToken cancellationToken)
+        IValidator<GetRegistrationsQuery> validator, CancellationToken cancellationToken)
     {
+        //validate query
+        var validationResult = await validator.ValidateAsync(query, cancellationToken);
+        if (!validationResult.IsValid)
+        {
+            //return 400 Bad Request If invalid
+            return Results.ValidationProblem(validationResult.ToDictionary());
+        }
+
         var result = await handler.HandleAsync(query, cancellationToken);
         return result.IsSuccess
             ? TypedResults.Ok(result.Value)
