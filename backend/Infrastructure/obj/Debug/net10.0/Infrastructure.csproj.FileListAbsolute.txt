@@ -19,3 +19,21 @@ E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-P
 E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-Project\Midterm-Project-LastName\Infrastructure\bin\Debug\net10.0\Domain.dll
 E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-Project\Midterm-Project-LastName\Infrastructure\bin\Debug\net10.0\Application.pdb
 E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-Project\Midterm-Project-LastName\Infrastructure\bin\Debug\net10.0\Domain.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\bin\Debug\net10.0\Infrastructure.deps.json
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\bin\Debug\net10.0\Infrastructure.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\bin\Debug\net10.0\Infrastructure.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\bin\Debug\net10.0\Application.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\bin\Debug\net10.0\Domain.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\bin\Debug\net10.0\Application.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\bin\Debug\net10.0\Domain.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.AssemblyInfo.cs
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.sourcelink.json
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastr.15EFFBFE.Up2Date
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\refint\Infrastructure.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\Infrastructure.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Infrastructure\obj\Debug\net10.0\ref\Infrastructure.dll

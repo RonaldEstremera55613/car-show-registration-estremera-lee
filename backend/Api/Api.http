@@ -1,6 +1,136 @@
-@Api_HostAddress = http://localhost:5205
+@host = http://localhost:5205
 
-GET {{Api_HostAddress}}/api/students/
-Accept: application/json
+### ==========================================
+### 1. MAKE A NEW REGISTRATION
+### ==========================================
 
-###
+### Case 01: Valid Competitor, partly paid
+POST {{host}}/api/registrations
+Content-Type: application/json
+
+{
+  "participantName": "Juan Dela Cruz",
+  "contactNumber": "09171234567",
+  "email": "juan.delacruz@example.com",
+  "address": "123 Rizal St., Naga City",
+  "carMakeModel": "Toyota Supra MK4",
+  "plateNumber": "TST 1001",
+  "registrationType": "Competitor",
+  "amountPaid": 1000.00
+}
+
+### Case 02: Valid Exhibitor, not paid
+POST {{host}}/api/registrations
+Content-Type: application/json
+
+{
+  "participantName": "Maria Santos",
+  "contactNumber": "09181234567",
+  "email": "maria@example.com",
+  "address": "456 Mabini St., Sorsogon",
+  "carMakeModel": "Honda Civic",
+  "plateNumber": "TST 1002",
+  "registrationType": "Exhibitor",
+  "amountPaid": 0
+}
+
+### Case 03: Valid VIP, fully paid
+POST {{host}}/api/registrations
+Content-Type: application/json
+
+{
+  "participantName": "Pedro Reyes",
+  "contactNumber": "09191234567",
+  "email": "pedro@example.com",
+  "address": "789 Luna St., Sorsogon",
+  "carMakeModel": "Nissan GTR",
+  "plateNumber": "TST 1003",
+  "registrationType": "VIP",
+  "amountPaid": 5000
+}
+
+### Case 06: All text fields empty (Expect 400)
+POST {{host}}/api/registrations
+Content-Type: application/json
+
+{
+  "participantName": "",
+  "contactNumber": "",
+  "email": "",
+  "address": "",
+  "carMakeModel": "",
+  "plateNumber": "",
+  "registrationType": "Competitor",
+  "amountPaid": 1000.00
+}
+
+### Case 07: Invalid contact number (Expect 400)
+POST {{host}}/api/registrations
+Content-Type: application/json
+
+{
+  "participantName": "Juan Dela Cruz",
+  "contactNumber": "12345",
+  "email": "juan.delacruz@example.com",
+  "address": "123 Rizal St., Naga City",
+  "carMakeModel": "Toyota Supra MK4",
+  "plateNumber": "TST 1007",
+  "registrationType": "Competitor",
+  "amountPaid": 1000.00
+}
+
+### Case 13: Duplicate plate number (Expect 409)
+POST {{host}}/api/registrations
+Content-Type: application/json
+
+{
+  "participantName": "Juan Dela Cruz",
+  "contactNumber": "09171234567",
+  "email": "juan.delacruz@example.com",
+  "address": "123 Rizal St., Naga City",
+  "carMakeModel": "Toyota Supra MK4",
+  "plateNumber": "TST 1001",
+  "registrationType": "Competitor",
+  "amountPaid": 1000.00
+}
+
+### ==========================================
+### 2. GET REGISTRATIONS
+### ==========================================
+
+### Case 14: Default list
+GET {{host}}/api/registrations
+
+### Case 16: Second page, custom size
+GET {{host}}/api/registrations?page=2&pageSize=5
+
+### Case 17: Page past the end
+GET {{host}}/api/registrations?page=999
+
+### Case 18: Invalid page (Expect 400)
+GET {{host}}/api/registrations?page=0
+
+### Case 19: Page size too large (Expect 400)
+GET {{host}}/api/registrations?pageSize=100
+
+### Case 20: Find by type
+GET {{host}}/api/registrations?type=VIP
+
+### Case 21: Find by status
+GET {{host}}/api/registrations?status=Confirmed
+
+### Case 22: Find by participant name
+GET {{host}}/api/registrations?participantName=Juan
+
+### Case 25: Combined filters
+GET {{host}}/api/registrations?type=Competitor&status=Pending&participantName=juan
+
+### ==========================================
+### 3. GET BY ID & SUMMARY
+### ==========================================
+
+### Case 30: ID that doesn't exist (Expect 404)
+GET {{host}}/api/registrations/00000000-0000-0000-0000-000000000001
+
+### Case 32: Summary returns all fields
+GET {{host}}/api/registrations/summary

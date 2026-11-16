@@ -1,5 +1,10 @@
+using Api.Features.Registrations;
 using Application.Abstractions.Data;
 using Application.Abstractions.Messaging;
+using Application.Features.Registrations.CreateRegistration;
+using Application.Features.Registrations.GetRegistrationById;
+using Application.Features.Registrations.GetRegistrations;
+using Application.Features.Registrations.GetRegistrationSummary;
 using Domain.Common;
 using FluentValidation;
 using Infrastructure.Persistence;
@@ -10,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Database
 builder.Services.AddDbContext<IAppDbContext, AppDbContext>(options =>
-    options.UseInMemoryDatabase("VerticalSliceDb"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("Database")));
 
 // Validators
 builder.Services.AddValidatorsFromAssembly(typeof(IAppDbContext).Assembly);
@@ -18,6 +23,16 @@ builder.Services.AddValidatorsFromAssembly(typeof(IAppDbContext).Assembly);
 // Handlers
 // builder.Services.AddScoped<ICommandHandler<TCommand, Result<TResponse>>, TCommandHandler>();
 // builder.Services.AddScoped<IQueryHandler<TQuery, Result<TResponse>>, TQueryHandler>();
+// Allow Enums to be passed as strings in JSON
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+});
+
+builder.Services.AddScoped<ICommandHandler<CreateRegistrationCommand, Result<CreateRegistrationResponse>>, CreateRegistrationCommandHandler>();
+builder.Services.AddScoped<IQueryHandler<GetRegistrationsQuery, Result<GetRegistrationsResponse>>, GetRegistrationsQueryHandler>();
+builder.Services.AddScoped<IQueryHandler<GetRegistrationSummaryQuery, Result<GetRegistrationSummaryResponse>>, GetRegistrationSummaryQueryHandler>();
+builder.Services.AddScoped<IQueryHandler<GetRegistrationByIdQuery, Result<GetRegistrationByIdResponse>>, GetRegistrationByIdQueryHandler>();
 
 // API
 builder.Services.AddEndpointsApiExplorer();
@@ -33,15 +48,8 @@ builder.Services.AddOpenApi(options =>
 
 var app = builder.Build();
 
-// Seed data
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-
-    // dbContext.<Entities>.AddRange(...);
-
-    dbContext.SaveChanges();
-}
+//Seed Data
+await app.Services.MigrateAndSeedAsync();
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
@@ -55,5 +63,6 @@ app.MapGet("/", () => "Welcome to the Vertical Slice API! Go to /scalar/v1 for A
 
 // Map endpoints
 // app.Map{FeatureGroup}Endpoints();
+app.MapRegistrationEndpoints();
 
 app.Run();

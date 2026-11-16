@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Application\\Application.csproj": {
+    "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Faculty\\.nuget\\packages\\",
-        "outputPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Application\\obj\\",
+        "projectPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\laraa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Faculty\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\laraa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,8 +33,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj": {
-                "projectPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj"
+              "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -364,20 +363,20 @@
         }
       }
     },
-    "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj": {
+    "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Faculty\\.nuget\\packages\\",
-        "outputPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\laraa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Faculty\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\laraa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -386,7 +385,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -706,20 +704,20 @@
         }
       }
     },
-    "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Faculty\\.nuget\\packages\\",
-        "outputPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\laraa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Faculty\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\laraa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -728,7 +726,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -736,11 +733,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Application\\Application.csproj": {
-                "projectPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Application\\Application.csproj"
+              "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Application\\Application.csproj"
               },
-              "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj": {
-                "projectPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj"
+              "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -767,6 +764,10 @@
               "version": "[10.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[10.0.0, )"
             }

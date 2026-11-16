@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Faculty\\.nuget\\packages\\": {},
+    "C:\\Users\\laraa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\Faculty\\.nuget\\packages\\",
-      "outputPath": "F:\\ROEM FILES\\SUBJECTS\\Integrative Programming 2\\Lab Sheets\\Final-Test-Project\\Final-Project-BackendAPI-Startup\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\laraa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laraa\\OneDrive\\Desktop\\Ronald_Estremera\\IntegrativeProg2\\car-show-registration\\backend\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Faculty\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\laraa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

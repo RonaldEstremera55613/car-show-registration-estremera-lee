@@ -13,3 +13,15 @@ E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-P
 E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-Project\Midterm-Project-LastName\Domain\bin\Debug\net10.0\Domain.deps.json
 E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-Project\Midterm-Project-LastName\Domain\bin\Debug\net10.0\Domain.dll
 E:\MY FILES\DOCUMENTS\MY-SUBJECTS\Integrative Programming 2\Lab Sheets\Midterm-Project\Midterm-Project-LastName\Domain\bin\Debug\net10.0\Domain.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\bin\Debug\net10.0\Domain.deps.json
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\bin\Debug\net10.0\Domain.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\bin\Debug\net10.0\Domain.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\Domain.AssemblyInfoInputs.cache
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\Domain.AssemblyInfo.cs
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\Domain.sourcelink.json
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\Domain.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\refint\Domain.dll
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\Domain.pdb
+C:\Users\laraa\OneDrive\Desktop\Ronald_Estremera\IntegrativeProg2\car-show-registration\backend\Domain\obj\Debug\net10.0\ref\Domain.dll
