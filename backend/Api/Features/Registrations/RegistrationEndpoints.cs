@@ -3,6 +3,7 @@
 using Api.Common.Extensions;
 using Application.Abstractions.Messaging;
 using Application.Features.Registrations.CreateRegistration;
+using Application.Features.Registrations.GetRegistrations;
 using Domain.Common;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,12 @@ public static class RegistrationEndpoints
             .Produces<CreateRegistrationResponse>(StatusCodes.Status201Created)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .ProducesProblem(StatusCodes.Status409Conflict);
+
+        group.MapGet("/", GetAll)
+            .WithName("GetRegistrations")
+            .WithSummary("Show all registrations (paged)")
+            .Produces<GetRegistrationsResponse>(StatusCodes.Status200OK)
+            .ProducesProblem(StatusCodes.Status400BadRequest);
     }
 
     private static async Task<IResult> Create(
@@ -30,6 +37,16 @@ public static class RegistrationEndpoints
 
         return result.IsSuccess
             ? TypedResults.Created($"/api/registrations/{result.Value!.Id}", result.Value)
+            : result.ToProblemDetails();
+    }
+    private static async Task<IResult> GetAll(
+        [AsParameters] GetRegistrationsQuery query,
+        IQueryHandler<GetRegistrationsQuery, Result<GetRegistrationsResponse>> handler,
+        CancellationToken cancellationToken)
+    {
+        var result = await handler.HandleAsync(query, cancellationToken);
+        return result.IsSuccess
+            ? TypedResults.Ok(result.Value)
             : result.ToProblemDetails();
     }
 }
