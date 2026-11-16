@@ -4,6 +4,7 @@ using Api.Common.Extensions;
 using Application.Abstractions.Messaging;
 using Application.Features.Registrations.CreateRegistration;
 using Application.Features.Registrations.GetRegistrations;
+using Application.Features.Registrations.GetRegistrationSummary;
 using Domain.Common;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,16 +17,20 @@ public static class RegistrationEndpoints
 
         group.MapPost("/", Create)
             .WithName("CreateRegistration")
-            .WithSummary("Make a new registration")
+            .WithSummary("Create Registration")
             .Produces<CreateRegistrationResponse>(StatusCodes.Status201Created)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .ProducesProblem(StatusCodes.Status409Conflict);
 
         group.MapGet("/", GetAll)
             .WithName("GetRegistrations")
-            .WithSummary("Show all registrations (paged)")
+            .WithSummary("Get All Registration")
             .Produces<GetRegistrationsResponse>(StatusCodes.Status200OK)
             .ProducesProblem(StatusCodes.Status400BadRequest);
+        group.MapGet("/summary", GetSummary)
+            .WithName("GetRegistrationSummary")
+            .WithSummary("Get Summary Registration")
+            .Produces<GetRegistrationSummaryResponse>(StatusCodes.Status200OK);
     }
 
     private static async Task<IResult> Create(
@@ -45,6 +50,16 @@ public static class RegistrationEndpoints
         CancellationToken cancellationToken)
     {
         var result = await handler.HandleAsync(query, cancellationToken);
+        return result.IsSuccess
+            ? TypedResults.Ok(result.Value)
+            : result.ToProblemDetails();
+    }
+
+    private static async Task<IResult> GetSummary(
+        IQueryHandler<GetRegistrationSummaryQuery, Result<GetRegistrationSummaryResponse>> handler,
+        CancellationToken cancellationToken)
+    {
+        var result = await handler.HandleAsync(new GetRegistrationSummaryQuery(), cancellationToken);
         return result.IsSuccess
             ? TypedResults.Ok(result.Value)
             : result.ToProblemDetails();
