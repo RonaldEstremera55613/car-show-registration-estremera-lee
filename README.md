@@ -10,10 +10,10 @@ The application aims to replace manual paper forms and spreadsheets with an orga
 
 ## Team Members and Responsibilities
 
-|       Member     |             Role                |
-|------------------|---------------------------------|
-| Ronald Estremera | Backend Developer (Team Leader) |
-| Marco Keon Lee   | Frontend Developer              |
+| Member | Role |
+|---|---|
+| **Ronald Estremera** | Backend Developer (Team Leader) |
+| **Marco Keon Lee** | Frontend Developer |
 
 ## Project Overview
 
@@ -99,6 +99,7 @@ Registration fees are determined by the backend according to the selected regist
 
 The project follows the required shared repository structure:
 
+```text
 car-show-registration/
 │
 ├── backend/
@@ -119,6 +120,7 @@ car-show-registration/
 │
 ├── .gitignore
 └── README.md
+```
 
 ### Folder Responsibilities
 
@@ -133,7 +135,7 @@ car-show-registration/
 The backend provides the following REST API endpoints:
 
 | HTTP Method | Endpoint | Description |
-|-------------|----------|-------------|
+|---|---|---|
 | POST | `/api/registrations` | Create a new registration |
 | GET | `/api/registrations` | Retrieve all registrations with pagination |
 | GET | `/api/registrations/{id}` | Retrieve a registration by ID |
@@ -147,7 +149,7 @@ The backend provides the following REST API endpoints:
 The API uses appropriate HTTP status codes:
 
 | Status Code | Description |
-|-------------|-------------|
+|---|---|
 | 200 OK | Request completed successfully |
 | 201 Created | Registration successfully created |
 | 400 Bad Request | Invalid request or validation errors |
