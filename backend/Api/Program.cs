@@ -20,6 +20,17 @@ builder.Services.AddDbContext<IAppDbContext, AppDbContext>(options =>
 // Validators
 builder.Services.AddValidatorsFromAssembly(typeof(IAppDbContext).Assembly);
 
+// CORS Policy for React Frontend
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReact", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Handlers
 // builder.Services.AddScoped<ICommandHandler<TCommand, Result<TResponse>>, TCommandHandler>();
 // builder.Services.AddScoped<IQueryHandler<TQuery, Result<TResponse>>, TQueryHandler>();
@@ -50,6 +61,9 @@ var app = builder.Build();
 
 //Seed Data
 await app.Services.MigrateAndSeedAsync();
+
+//CORS
+app.UseCors("AllowReact");
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
