@@ -12,7 +12,7 @@ The application aims to replace manual paper forms and spreadsheets with an orga
 
 | Member | Role |
 |---|---|
-| **Ronald Estremera** | Backend Developer (Team Leader) |
+| **Ronald Estremera** | Backend Developer |
 | **Marco Keon Lee** | Frontend Developer |
 
 ## Project Overview
