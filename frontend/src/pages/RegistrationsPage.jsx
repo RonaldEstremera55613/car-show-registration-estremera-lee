@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import {
   getRegistrations,
   getSummary,
-} from "../api/sample-data";
+} from "../api/registrationsApi";
 
 import KpiCards from "../components/KpiCards";
 import RegistrationFilters from "../components/RegistrationFilters";
@@ -49,7 +49,12 @@ function RegistrationsPage() {
       setTotalPages(registrationData.totalPages);
       setSummary(summaryData);
     } catch (err) {
-      setError("Cannot load registrations. Please try again.");
+      const message =
+        err.message === "Failed to fetch"
+          ? "Cannot reach the API. Please check that the backend is running and try again."
+          : err.message || "Cannot load registrations. Please try again.";
+
+      setError(message);
     } finally {
       setLoading(false);
     }
